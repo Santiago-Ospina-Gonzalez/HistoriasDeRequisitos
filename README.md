@@ -12,29 +12,16 @@ Nicolas Lozano:
 
 Santiago Ospina:
 
-Prioridad: Media
+Título: Gestión de Objetos Virtuales de Aprendizaje (OVA)
 
-Atributo de calidad: Funcionalidad
+Historia de Usuario:
+Como administrador, quiero poder crear, editar y eliminar Objetos Virtuales de Aprendizaje (OVA), para gestionar el contenido educativo de manera eficiente.
 
-Cuando: El usuario intente buscar un producto en la plataforma.
-
-Dado que: El sistema se encuentra en estado normal y el usuario está autenticado.
-
-Yo como: Usuario del sistema.
-
-Quiero: Poder buscar productos por nombre o categoría.
-
-Y debe suceder:
-
-Cuando el usuario ingrese un término de búsqueda en el campo de búsqueda y presione "Enter" o haga clic en el botón "Buscar", el sistema debe mostrar una lista de productos que coincidan con el término de búsqueda.
-
-Si no se encuentran resultados, el sistema debe mostrar un mensaje claro: "No se encontraron productos que coincidan con tu búsqueda".
-
-El sistema debe permitir filtrar los resultados de búsqueda por categoría, precio o calificación.
-
-La búsqueda debe ser insensible a mayúsculas y minúsculas (por ejemplo, buscar "Laptop" y "laptop" debe dar los mismos resultados).
-
-Los resultados de búsqueda deben cargarse en menos de 3 segundos.
+Criterios de Aceptación:
+El sistema debe mostrar un formulario para crear un nuevo OVA con campos como título, descripción y archivos multimedia.
+El administrador debe poder editar los detalles de un OVA existente, incluyendo la actualización de archivos multimedia.
+El administrador debe poder eliminar un OVA, lo que eliminará todos los datos asociados de la base de datos.
+Cada acción (crear, editar, eliminar) debe registrar un log de auditoría para fines de seguimiento.
 
 Alejandro Hernandez:
 
@@ -49,24 +36,15 @@ Angie Cobo:
 Nicolas Lozano:
 
 Santiago Ospina:
-Prioridad: Alta
+Título: Escalabilidad del Sistema
 
-Atributo de calidad: Confiabilidad
+Historia de Usuario:
+Como usuario, quiero que la plataforma sea escalable, para que pueda manejar un aumento en el número de usuarios sin afectar el rendimiento.
 
-Cuando: El usuario intente enviar o recibir un mensaje.
-
-Dado que: El sistema se encuentra en estado normal.
-
-Yo como: Usuario del sistema.
-
-Quiero: Enviar o recibir mensajes sin fallos ni pérdida de información.
-
-Y debe suceder:
-
-Cuando yo o el otro usuario (quien me envía el mensaje) presionemos el botón de enviar mensaje, el mensaje debe llegar sin fallos ni pérdida de información en los próximos 2 segundos (debe haber una conexión a internet).
-
-El sistema debe garantizar que los mensajes se almacenen temporalmente en caso de interrupción de la conexión y se reenvíen automáticamente cuando se restablezca.
-
-Si la conexión a internet falla, el sistema debe notificar al usuario con un mensaje claro: "Conexión perdida. El mensaje se enviará cuando se restablezca la conexión".
+Criterios de Aceptación:
+El sistema debe desplegarse en contenedores Docker y orquestarse con Kubernetes para garantizar escalabilidad horizontal.
+La plataforma debe soportar hasta 10,000 usuarios concurrentes sin degradación del rendimiento.
+En caso de alta demanda, el sistema debe escalar automáticamente agregando más instancias de microservicios.
+El tiempo de respuesta promedio no debe exceder los 2 segundos, incluso bajo carga máxima.
 
 Alejandro Hernandez:
