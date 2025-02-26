@@ -37,6 +37,24 @@ Como desarrollador, debo implementar una funcionalidad segura y eficiente para l
 
 ### Angie Cobo:
 
+### Titulo: Paginación y búsqueda avanzada.
+
+**Historia de usuario**
+ Como administrador, quiero implementar la paginación en los listados, de tal manera en que el usuario pueda navegar por el sistema de manera rápida e intuitiva, así como la búsqueda eficiente por filtros, que le permita encontrar la información específica según sus preferencias.
+
+**Criterios de Aceptación**
+-El sistema debe presentar en la parte inferior la numeración correspondiente, implementando una función de paginación.
+
+-Debe contar con una opción de avanzar y retroceder entre páginas.
+
+-La paginación debe ser responsive.
+
+-En la parte superior de la plataforma se debe incluir un botón que permitirá al usuario acceder a las búsquedas avanzadas.
+
+-La búsqueda avanzada debe permitir filtrar los datos por parámetros como: nombre del material, asignatura, docente, tipo de contenido, entre otras.
+
+-Los resultados deben actualizarse en un tiempo máximo de 4 segundos, despues de realizar el proceso de filtración.
+
 ### Nicolas Lozano:
 
 #### Titulo: Sistema de roles y permisos
@@ -136,6 +154,23 @@ Como desarrollador, quiero implementar un sistema de monitoreo con Prometheus y 
 **Criterios de Aceptación:** El código del proyecto debe seguir estándares de calidad y buenas prácticas, garantizando que sea estructurado, legible y fácil de mantener. SonarQube debe estar integrado en el flujo de desarrollo para realizar análisis automáticos del código, identificando problemas como código duplicado, vulnerabilidades de seguridad, errores comunes y baja cobertura de pruebas. Los análisis deben ejecutarse en cada commit o push a la rama principal, generando reportes detallados sobre la calidad del código. Se deben definir métricas mínimas aceptables, como un umbral de deuda técnica y una cobertura de pruebas superior a un porcentaje acordado. Cualquier cambio que introduzca nuevos problemas críticos o bloquee la calidad del código debe ser corregido antes de su integración. Además, el equipo de desarrollo debe revisar periódicamente los reportes de SonarQube y aplicar mejoras continuas basadas en sus recomendaciones.
 
 ### Angie Cobo:
+
+#### Título: Seguridad.
+
+**Historia de Usuario**
+
+Como usuario quiero que se cuente con mecanismos de seguridad para proteger mis datos, garantizando la confiabilidad en el sistema.
+
+**Criterios de Aceptación**
+-El sistema debe contar con protección contra ataques de inyección, tales como el XSS(Cross-Site Scripting), SQL (Inyección de código SQL) y el CSRF(Cross-Site Request Forgery).
+
+-Protección contra malware y virus.
+
+-Protección contra ataques de phishing. 
+
+-Los datos sensibles deben estar cifrados.
+
+-La plataforma debe exigir contraseñas seguras, estableciendo un mínimo de longitud, el uso de caracteres especiales, mayúsculas, minúsculas y números.
 
 ### Nicolas Lozano:
 
