@@ -39,6 +39,32 @@ Como desarrollador, debo implementar una funcionalidad segura y eficiente para l
 
 ### Nicolas Lozano:
 
+### Titulo: Sistema de roles y permisos
+
+**Historia de usuario**
+Como desarrollador, Quiero implementar un sistema de roles y permisos para administradores, docentes y estudiantes, Para que cada tipo de usuario tenga acceso a las funciones y datos apropiados según su rol.
+
+**Criterios de Aceptación**
+Base de Datos de Roles y Permisos
+Dado que estoy configurando la base de datos,
+Cuando creo tablas y relaciones,
+Entonces debo tener una tabla de roles y una tabla de permisos, con una relación de muchos a muchos entre ellas, y una tabla de usuarios relacionada con roles.
+
+Interfaz de Gestión de Roles
+Dado que estoy desarrollando la interfaz de usuario,
+Cuando el administrador accede a la sección de gestión de usuarios,
+Entonces debe poder crear, editar y eliminar roles, así como asignar permisos específicos a cada rol.
+
+Asignación de Roles a Usuarios
+Dado que estoy configurando la gestión de usuarios,
+Cuando el administrador edita la información de un usuario,
+Entonces debe poder asignar uno o más roles al usuario y estos cambios deben reflejarse en su próximo inicio de sesión.
+
+Restricciones Basadas en Roles
+Dado que estoy implementando las restricciones de acceso,
+Cuando un usuario con rol asignado (administrador, docente o estudiante) inicia sesión en el sistema,
+Entonces debe tener acceso solo a las funcionalidades y datos específicos de su rol.
+
 ### Santiago Ospina:
 
 #### Título: Gestión de Objetos Virtuales de Aprendizaje (OVA)
@@ -94,6 +120,42 @@ Como desarrollador, quiero implementar un sistema de monitoreo con Prometheus y 
 ### Angie Cobo:
 
 ### Nicolas Lozano:
+
+### Título: Disponibilidad
+
+**Historia de Usuario**
+Como desarrollador, Quiero implementar alta disponibilidad con réplicas de bases de datos y balanceo de carga, Para que el sistema sea resistente a fallos y pueda manejar altos volúmenes de tráfico sin interrupciones.
+
+**Criterios de Aceptación**
+Configuración de Réplicas de Bases de Datos
+Dado que estoy configurando la base de datos,
+Cuando implemento réplicas,
+Entonces las bases de datos deben estar replicadas en múltiples servidores para garantizar la redundancia.
+
+Sincronización de Datos
+Dado que estoy gestionando la sincronización,
+Cuando se realizan cambios en la base de datos principal,
+Entonces los datos deben ser replicados a las bases de datos secundarias en tiempo real o casi en tiempo real.
+
+Balanceo de Carga
+Dado que estoy implementando el balanceo de carga,
+Cuando el tráfico de usuarios aumenta,
+Entonces el sistema debe distribuir automáticamente las solicitudes entre múltiples servidores para evitar sobrecargas.
+
+Detección y Conmutación por Error
+Dado que estoy implementando la alta disponibilidad,
+Cuando un servidor falla,
+Entonces el sistema debe detectar el fallo y redirigir automáticamente las solicitudes a los servidores disponibles sin interrupciones notables para los usuarios.
+
+Monitoreo y Alertas
+Dado que estoy configurando el sistema de monitoreo,
+Cuando se detectan anomalías en el rendimiento de los servidores o bases de datos,
+Entonces deben generarse alertas en tiempo real para permitir una respuesta rápida.
+
+Pruebas de Resiliencia
+Dado que estoy realizando pruebas del sistema,
+Cuando se simulan fallos de servidor y picos de tráfico,
+Entonces el sistema debe demostrar que puede manejar estas situaciones sin pérdida de datos ni interrupciones significativas en el servicio.
 
 ### Santiago Ospina:
 #### Título: Escalabilidad del Sistema
