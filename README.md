@@ -58,29 +58,30 @@ Cada acción (crear, editar, eliminar) debe registrar un log de auditoría para 
 
 ### Angel Cuero:
 
-#### Título: Seguridad.
+#### Título: Monitoreo.
 
 **Historia de Usuario:**
-Como desarrollador, quiero garantizar la seguridad de la plataforma protegiéndola contra vulnerabilidades como inyección SQL, XSS y CSRF, asegurando la integridad y confidencialidad de los datos mediante la implementación de buenas prácticas y herramientas de seguridad.
+Como desarrollador, quiero implementar un sistema de monitoreo con Prometheus y Grafana para visualizar el rendimiento de la plataforma en tiempo real, permitiendo la detección temprana de anomalías y la optimización del sistema.
 
 **Criterios de Aceptación:**
--La aplicación debe contar con medidas de protección contra inyección SQL, asegurando que todas las consultas a la base de datos utilicen parámetros preparados o frameworks ORM que eviten este tipo de ataques.
 
--Se debe implementar un sistema de validación y sanitización de entradas para prevenir ataques de Cross-Site Scripting (XSS) y Cross-Site Request Forgery (CSRF).
+-La plataforma debe contar con Prometheus para la recopilación de métricas del sistema, incluyendo uso de CPU, memoria, latencia de respuesta, tráfico de red y estado de los microservicios.
 
--Los endpoints de la API deben utilizar HTTPS para garantizar la encriptación de los datos en tránsito.
+-Grafana debe estar configurado con dashboards personalizados que presenten métricas clave del sistema de forma clara y accesible.
 
--La plataforma debe aplicar un modelo de control de acceso basado en roles (RBAC) para restringir adecuadamente el acceso a los recursos según los permisos de cada usuario.
+-Se deben generar alertas automáticas en caso de detección de anomalías, como alta latencia, consumo excesivo de recursos o fallos en los servicios.
 
--Se debe integrar herramientas de análisis de seguridad estática y dinámica, como SonarQube y OWASP Dependency-Check, para detectar vulnerabilidades en el código y en las dependencias del proyecto.
+-Todas las métricas y logs deben ser almacenados y gestionados de manera eficiente, permitiendo su consulta histórica para análisis de tendencias y optimización del rendimiento.
 
--La autenticación y gestión de sesiones deben seguir buenas prácticas, utilizando OAuth2 y JWT con tiempos de expiración adecuados y un mecanismo de revocación de tokens en caso de actividad sospechosa.
+-El monitoreo debe incluir métricas específicas de la aplicación, como número de usuarios activos, operaciones realizadas sobre los OVA y eventos de autenticación.
 
--Se debe implementar monitoreo y alertas de seguridad con herramientas como Prometheus y Grafana para detectar y responder a eventos anómalos o intentos de acceso no autorizados.
+-La solución de monitoreo debe ser escalable, garantizando que pueda manejar el crecimiento de la plataforma sin afectar su rendimiento.
 
--Todos los eventos de seguridad relevantes, como intentos fallidos de autenticación, cambios en permisos y accesos a datos sensibles, deben ser registrados en logs auditables con fecha, hora y detalles de la acción.
+-Se deben definir umbrales de rendimiento aceptables y generar alertas cuando se superen los límites establecidos.
 
--Se debe realizar periódicamente pruebas de penetración y auditorías de seguridad para identificar y mitigar posibles vulnerabilidades antes de que puedan ser explotadas.
+-El sistema de monitoreo debe integrarse con herramientas de orquestación como Kubernetes para visualizar el estado de los pods, nodos y balanceadores de carga.
+
+-Se deben realizar revisiones periódicas de las métricas recolectadas para identificar oportunidades de mejora y ajustar configuraciones según sea necesario.
 
 ### Jose Loaiza:
 
