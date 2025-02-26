@@ -39,7 +39,7 @@ Como desarrollador, debo implementar una funcionalidad segura y eficiente para l
 
 ### Nicolas Lozano:
 
-### Titulo: Sistema de roles y permisos
+#### Titulo: Sistema de roles y permisos
 
 **Historia de usuario**
 Como desarrollador, Quiero implementar un sistema de roles y permisos para administradores, docentes y estudiantes, Para que cada tipo de usuario tenga acceso a las funciones y datos apropiados según su rol.
@@ -121,7 +121,7 @@ Como desarrollador, quiero implementar un sistema de monitoreo con Prometheus y 
 
 ### Nicolas Lozano:
 
-### Título: Disponibilidad
+#### Título: Disponibilidad
 
 **Historia de Usuario**
 Como desarrollador, Quiero implementar alta disponibilidad con réplicas de bases de datos y balanceo de carga, Para que el sistema sea resistente a fallos y pueda manejar altos volúmenes de tráfico sin interrupciones.
