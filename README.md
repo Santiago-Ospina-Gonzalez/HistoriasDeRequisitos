@@ -3,6 +3,29 @@
 ## Requistos Funcionales:
 
 ### Angel Cuero:
+#### Título: carga y descarga de archivos.
+
+**Historia de Usuario:**
+Como desarrollador, debo implementar una funcionalidad segura y eficiente para la carga y descarga de archivos dentro de los Objetos Virtuales de Aprendizaje (OVA), permitiendo a los usuarios gestionar contenido multimedia sin comprometer la integridad y seguridad de la plataforma.
+
+**Criterios de Aceptación:**
+-El sistema debe permitir a los usuarios autenticados cargar archivos multimedia (imágenes, videos, documentos) asociados a un OVA.
+
+-Se debe establecer un límite configurable para el tamaño máximo de los archivos permitidos.
+
+-Los archivos deben ser almacenados de manera segura, utilizando un servicio de almacenamiento distribuido o en la nube (ej. MinIO, AWS S3, Google Cloud Storage).
+
+-Al descargar un archivo, el sistema debe verificar que el usuario tenga los permisos adecuados para acceder al recurso.
+
+-Todas las descargas deben realizarse a través de enlaces firmados o autenticados para evitar accesos no autorizados.
+
+-El sistema debe soportar la validación del tipo de archivo para prevenir la carga de contenido no permitido.
+
+-Se debe registrar en logs cada operación de carga y descarga, incluyendo la fecha, hora, usuario y estado de la operación.
+
+-En caso de error en la carga o descarga, el sistema debe proporcionar mensajes claros y códigos HTTP adecuados (400, 403, 404, 500).
+
+-La implementación debe seguir buenas prácticas de seguridad, incluyendo la protección contra inyecciones de archivos maliciosos, uso de HTTPS y cifrado de datos sensibles en tránsito y en reposo.
 
 ### Jose Loaiza:
 
@@ -34,6 +57,30 @@ Cada acción (crear, editar, eliminar) debe registrar un log de auditoría para 
 ## Requisitos No Funcionales:
 
 ### Angel Cuero:
+
+#### Título: Seguridad.
+
+**Historia de Usuario:**
+Como desarrollador, quiero garantizar la seguridad de la plataforma protegiéndola contra vulnerabilidades como inyección SQL, XSS y CSRF, asegurando la integridad y confidencialidad de los datos mediante la implementación de buenas prácticas y herramientas de seguridad.
+
+**Criterios de Aceptación:**
+-La aplicación debe contar con medidas de protección contra inyección SQL, asegurando que todas las consultas a la base de datos utilicen parámetros preparados o frameworks ORM que eviten este tipo de ataques.
+
+-Se debe implementar un sistema de validación y sanitización de entradas para prevenir ataques de Cross-Site Scripting (XSS) y Cross-Site Request Forgery (CSRF).
+
+-Los endpoints de la API deben utilizar HTTPS para garantizar la encriptación de los datos en tránsito.
+
+-La plataforma debe aplicar un modelo de control de acceso basado en roles (RBAC) para restringir adecuadamente el acceso a los recursos según los permisos de cada usuario.
+
+-Se debe integrar herramientas de análisis de seguridad estática y dinámica, como SonarQube y OWASP Dependency-Check, para detectar vulnerabilidades en el código y en las dependencias del proyecto.
+
+-La autenticación y gestión de sesiones deben seguir buenas prácticas, utilizando OAuth2 y JWT con tiempos de expiración adecuados y un mecanismo de revocación de tokens en caso de actividad sospechosa.
+
+-Se debe implementar monitoreo y alertas de seguridad con herramientas como Prometheus y Grafana para detectar y responder a eventos anómalos o intentos de acceso no autorizados.
+
+-Todos los eventos de seguridad relevantes, como intentos fallidos de autenticación, cambios en permisos y accesos a datos sensibles, deben ser registrados en logs auditables con fecha, hora y detalles de la acción.
+
+-Se debe realizar periódicamente pruebas de penetración y auditorías de seguridad para identificar y mitigar posibles vulnerabilidades antes de que puedan ser explotadas.
 
 ### Jose Loaiza:
 
