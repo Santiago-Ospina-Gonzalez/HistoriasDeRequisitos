@@ -80,6 +80,24 @@ Cada acción (crear, editar, eliminar) debe registrar un log de auditoría para 
 
 ### Alejandro Hernandez:
 
+#### Título: Comunicación asíncrona.
+
+**Historia de Usuario:**
+Como desarrollador, quiero integrar Apache Kafka en el sistema para procesar datos de eventos y notificaciones de manera asíncrona, con el proposito de mejorar el rendimiento y la escalabilidad en la gestión de comunicaciones dentro de nuestra plataforma.
+
+**Criterios de Aceptación:**
+
+-Se debe configurar correctamente Kafla en el backend y que este sea capaz de iniciar sin errores y/o problemas.
+
+-Las notificaciones deben enviarse de forma asíncrona a los usuarios según los eventos generados en el sistema.
+
+-En caso de fallos en el sistema de entrega de mensajes, debe existir una estrategia de reintentos para evitar la pérdida de eventos cruciales.
+
+-El sistema debe registrar los eventos procesados y los errores en logs para su futuro monitoreo y depuración.
+
+-Las pruebas de integración que establezcamos deben confirmar que Kafka maneja correctamente la comunicación entre servicios sin afectar el rendimiento del backend.
+
+
 ## Requisitos No Funcionales:
 
 ### Angel Cuero:
@@ -169,4 +187,21 @@ La plataforma debe soportar hasta 10,000 usuarios concurrentes sin degradación 
 En caso de alta demanda, el sistema debe escalar automáticamente agregando más instancias de microservicios.
 El tiempo de respuesta promedio no debe exceder los 2 segundos, incluso bajo carga máxima.
 
-### Alejandro Hernandez:
+### Alejandro Hernandez
+
+#### Título: Pruebas automatizadas.
+
+**Historia de Usuario:**
+Como desarrollador, quiero integrar pruebas automatizadas utilizando bien sea Postman, JUnit y/o Mockito para el backend, y a su vez Jasmine y/o Karma para el frontend, con el fin de garantizar la estabilidad del sistema, detectar errores durante el desarrollo y mejorar la calidad del código.
+
+**Criterios de Aceptación:**
+
+-El entorno o los entornos de pruebas deben estar correctamente configurados y documentados.
+
+-Las pruebas unitarias en el backend deben ejecutarse correctamente alcanzando un mínimo del 80% de cobertura de código para evitar errores.
+
+-Las pruebas unitarias en el frontend deben ejecutarse correctamente, validando la funcionalidad de los principales componentes.
+
+-Las pruebas de integración deben ejecutarse correctamente, verificando la interacción entre módulos y servicios.
+
+-Se deben generar reportes e informes con los resultados de las pruebas automatizadas.
